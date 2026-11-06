@@ -1,0 +1,23 @@
+[project]
+name = "ADMH-Increment&Promotion"
+version = "0.10.0"
+description = "نظام إدارة السجل الوظيفي واحتساب العلاوات والترفيعات وكتب الشكر"
+requires-python = ">=3.12"
+dependencies = [
+    "PyQt6>=6.6",
+    "openpyxl>=3.1",
+    "reportlab>=4.0",
+    "arabic-reshaper>=3.0",
+    "python-bidi>=0.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
